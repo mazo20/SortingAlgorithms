@@ -14,9 +14,10 @@
 		54609C20213320C1002489C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54609C1E213320C1002489C0 /* LaunchScreen.storyboard */; };
 		548FFC0B2133330C00669920 /* SortingTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548FFC0A2133330C00669920 /* SortingTypeCell.xib */; };
 		548FFC0D213333BD00669920 /* SortingTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC0C213333BD00669920 /* SortingTypeCell.swift */; };
-		548FFC0F21333C1200669920 /* SortingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548FFC0E21333C1200669920 /* SortingView.xib */; };
-		548FFC1121333CC100669920 /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1021333CC100669920 /* SortingView.swift */; };
+		548FFC0F21333C1200669920 /* SortingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548FFC0E21333C1200669920 /* SortingViewCell.xib */; };
+		548FFC1121333CC100669920 /* SortingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1021333CC100669920 /* SortingViewCell.swift */; };
 		548FFC1321333DCB00669920 /* SortingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1221333DCB00669920 /* SortingViewController.swift */; };
+		548FFC1521347DA300669920 /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1421347DA300669920 /* SortingView.swift */; };
 		54D0959B213329A400E02478 /* SortingTilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0959A213329A400E02478 /* SortingTilesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,9 +31,10 @@
 		54609C21213320C1002489C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		548FFC0A2133330C00669920 /* SortingTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingTypeCell.xib; sourceTree = "<group>"; };
 		548FFC0C213333BD00669920 /* SortingTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTypeCell.swift; sourceTree = "<group>"; };
-		548FFC0E21333C1200669920 /* SortingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingView.xib; sourceTree = "<group>"; };
-		548FFC1021333CC100669920 /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
+		548FFC0E21333C1200669920 /* SortingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingViewCell.xib; sourceTree = "<group>"; };
+		548FFC1021333CC100669920 /* SortingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewCell.swift; sourceTree = "<group>"; };
 		548FFC1221333DCB00669920 /* SortingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewController.swift; sourceTree = "<group>"; };
+		548FFC1421347DA300669920 /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
 		54D0959A213329A400E02478 /* SortingTilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTilesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,8 +73,9 @@
 				548FFC1221333DCB00669920 /* SortingViewController.swift */,
 				54D0959A213329A400E02478 /* SortingTilesViewController.swift */,
 				54609C19213320B8002489C0 /* Main.storyboard */,
-				548FFC0E21333C1200669920 /* SortingView.xib */,
-				548FFC1021333CC100669920 /* SortingView.swift */,
+				548FFC0E21333C1200669920 /* SortingViewCell.xib */,
+				548FFC1421347DA300669920 /* SortingView.swift */,
+				548FFC1021333CC100669920 /* SortingViewCell.swift */,
 				548FFC0A2133330C00669920 /* SortingTypeCell.xib */,
 				548FFC0C213333BD00669920 /* SortingTypeCell.swift */,
 				54609C1C213320C1002489C0 /* Assets.xcassets */,
@@ -141,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				548FFC0B2133330C00669920 /* SortingTypeCell.xib in Resources */,
-				548FFC0F21333C1200669920 /* SortingView.xib in Resources */,
+				548FFC0F21333C1200669920 /* SortingViewCell.xib in Resources */,
 				54609C20213320C1002489C0 /* LaunchScreen.storyboard in Resources */,
 				54609C1D213320C1002489C0 /* Assets.xcassets in Resources */,
 				54609C1B213320B8002489C0 /* Main.storyboard in Resources */,
@@ -156,8 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				548FFC0D213333BD00669920 /* SortingTypeCell.swift in Sources */,
+				548FFC1521347DA300669920 /* SortingView.swift in Sources */,
 				54D0959B213329A400E02478 /* SortingTilesViewController.swift in Sources */,
-				548FFC1121333CC100669920 /* SortingView.swift in Sources */,
+				548FFC1121333CC100669920 /* SortingViewCell.swift in Sources */,
 				54609C18213320B8002489C0 /* ViewController.swift in Sources */,
 				54609C16213320B8002489C0 /* AppDelegate.swift in Sources */,
 				548FFC1321333DCB00669920 /* SortingViewController.swift in Sources */,

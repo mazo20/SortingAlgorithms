@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,34 +11,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortingView" rowHeight="285" id="BaG-5m-Qev" customClass="SortingView" customModule="SortingAlgorithms" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortingViewCell" rowHeight="285" id="BaG-5m-Qev" customClass="SortingViewCell" customModule="SortingAlgorithms" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="444" height="285"/>
-            <autoresizingMask key="autoresizingMask"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BaG-5m-Qev" id="IiN-4T-LB2">
                 <rect key="frame" x="0.0" y="0.0" width="444" height="284.5"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SortedValuesView" translatesAutoresizingMaskIntoConstraints="NO" id="heI-ze-6cV">
-                        <rect key="frame" x="0.0" y="0.0" width="444" height="285"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </imageView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT0-UF-JlV" customClass="SortingView" customModule="SortingAlgorithms" customModuleProvider="target">
+                        <rect key="frame" x="20" y="0.0" width="404" height="285"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="heI-ze-6cV" firstAttribute="leading" secondItem="IiN-4T-LB2" secondAttribute="leading" id="17m-2l-w7A"/>
-                    <constraint firstItem="heI-ze-6cV" firstAttribute="top" secondItem="IiN-4T-LB2" secondAttribute="top" id="Jaz-x5-Mgu"/>
-                    <constraint firstAttribute="bottom" secondItem="heI-ze-6cV" secondAttribute="bottom" id="PcV-ef-Ifl"/>
-                    <constraint firstAttribute="trailing" secondItem="heI-ze-6cV" secondAttribute="trailing" id="iMW-Fn-EJf"/>
+                    <constraint firstAttribute="bottom" secondItem="vT0-UF-JlV" secondAttribute="bottom" id="9T4-f3-5NO"/>
+                    <constraint firstAttribute="trailing" secondItem="vT0-UF-JlV" secondAttribute="trailing" constant="20" id="ZsN-bx-A0w"/>
+                    <constraint firstItem="vT0-UF-JlV" firstAttribute="top" secondItem="IiN-4T-LB2" secondAttribute="top" id="pVT-0u-QFH"/>
+                    <constraint firstItem="vT0-UF-JlV" firstAttribute="leading" secondItem="IiN-4T-LB2" secondAttribute="leading" constant="20" id="wnq-bd-XXh"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="newImageView" destination="heI-ze-6cV" id="S8c-iF-OfA"/>
+                <outlet property="sortingView" destination="vT0-UF-JlV" id="arD-Sx-Urk"/>
             </connections>
             <point key="canvasLocation" x="-209" y="-102.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="SortedValuesView" width="301" height="282"/>
-    </resources>
 </document>
