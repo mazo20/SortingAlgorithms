@@ -72,7 +72,13 @@
                             <outlet property="delegate" destination="V4g-83-DOe" id="Pf5-zM-mWj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quicksort" id="LJD-KS-AZc"/>
+                    <navigationItem key="navigationItem" title="Quicksort" id="LJD-KS-AZc">
+                        <barButtonItem key="rightBarButtonItem" title="Swap" id="U5b-qx-9ms">
+                            <connections>
+                                <action selector="swapPressed:" destination="V4g-83-DOe" id="AWE-Qp-aC2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ki-mx-vZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

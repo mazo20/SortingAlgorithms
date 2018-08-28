@@ -12,6 +12,11 @@ class SortingViewController: UITableViewController {
     
     fileprivate let reuseIdentifier = "SortingViewCell"
     
+    @IBAction func swapPressed(_ sender: Any) {
+        let cell = tableView.visibleCells[0] as! SortingViewCell
+        cell.sortingView.sort()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,16 +30,14 @@ class SortingViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SortingViewCell
-        cell.frame = CGRect(origin: cell.frame.origin, size: CGSize(width: view.frame.width, height: cell.frame.height))
-        print(cell.frame)
-        print(view.frame.width)
+        cell.layoutIfNeeded()
         cell.backgroundColor = .clear
-        cell.sortingView.draw(array: [1,10,1,10,5])
+        cell.sortingView.draw(array: Array(1...5))
         return cell
         
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 200
     }
 }
