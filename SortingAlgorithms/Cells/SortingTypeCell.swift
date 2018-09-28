@@ -23,7 +23,7 @@ class SortingTypeCell: UICollectionViewCell {
     }
     
     func commonInit() {
-        contentView.backgroundColor = .white
+        //contentView.backgroundColor = .white
     }
     
     

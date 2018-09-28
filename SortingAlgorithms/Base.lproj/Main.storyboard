@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KRg-jA-JvJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KRg-jA-JvJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sorting algorithms-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SortingAlgorithms" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sorting algorithms" largeTitleDisplayMode="always" id="Vip-TT-4Ck">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="5j0-iJ-gsm">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2364" y="139.880059970015"/>
-        </scene>
         <!--Sorting algorithms-->
         <scene sceneID="EpB-pd-iyF">
             <objects>
@@ -57,13 +36,13 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS3-xJ-jFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="865"/>
+            <point key="canvasLocation" x="2270" y="865"/>
         </scene>
         <!--Quicksort-->
         <scene sceneID="pXr-9S-9dC">
             <objects>
-                <tableViewController id="V4g-83-DOe" customClass="SortingViewController" customModule="SortingAlgorithms" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="lW2-5z-JH7">
+                <tableViewController id="V4g-83-DOe" customClass="SortingTableViewController" customModule="SortingAlgorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="lW2-5z-JH7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,17 +51,11 @@
                             <outlet property="delegate" destination="V4g-83-DOe" id="Pf5-zM-mWj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quicksort" id="LJD-KS-AZc">
-                        <barButtonItem key="rightBarButtonItem" title="Swap" id="U5b-qx-9ms">
-                            <connections>
-                                <action selector="swapPressed:" destination="V4g-83-DOe" id="AWE-Qp-aC2"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Quicksort" id="LJD-KS-AZc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ki-mx-vZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3209" y="865"/>
+            <point key="canvasLocation" x="3073" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qdd-Vd-zVA">
@@ -99,38 +72,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="Qo0-Y3-ywm" kind="relationship" relationship="viewControllers" id="cE8-2S-PfJ"/>
-                        <segue destination="SQi-wf-B5J" kind="relationship" relationship="viewControllers" id="9cV-Zu-YUn"/>
+                        <segue destination="676-Cf-Rsi" kind="relationship" relationship="viewControllers" id="9DP-q0-97F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygi-PW-Hm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="139.880059970015"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="W9g-G4-TPr">
+        <!--Settings-->
+        <scene sceneID="HPa-Ko-bfh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SQi-wf-B5J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="U2t-rE-JUJ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="qlI-XI-I8A">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nsz-BQ-61B"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CEb-k2-YDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="1NZ-e7-zNj" customClass="SettingsTableViewController" customModule="SortingAlgorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7sM-is-ade">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1NZ-e7-zNj" id="HDF-r0-kcW"/>
+                            <outlet property="delegate" destination="1NZ-e7-zNj" id="D9C-4e-Ic2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="FvW-5G-ahd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sy-NN-D1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1424.8" y="139.880059970015"/>
+            <point key="canvasLocation" x="2271" y="140"/>
         </scene>
         <!--Item-->
         <scene sceneID="Bva-5Q-kFv">
@@ -157,7 +123,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w16-s6-jfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="865"/>
+            <point key="canvasLocation" x="1462" y="865"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zrL-Rf-FhJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="676-Cf-Rsi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="u5j-4s-o9X"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="iPF-Id-FG7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1NZ-e7-zNj" kind="relationship" relationship="rootViewController" id="aO9-gf-GMr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILY-fC-Vtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="140"/>
         </scene>
     </scenes>
 </document>

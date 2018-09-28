@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54031C09214175AA0069F996 /* SwapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54031C08214175AA0069F996 /* SwapViewPresenter.swift */; };
+		54031C0B214186660069F996 /* AnimationSpeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54031C0A214186660069F996 /* AnimationSpeedCell.xib */; };
+		54031C0E214187380069F996 /* AnimationSpeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54031C0D214187380069F996 /* AnimationSpeedCell.swift */; };
+		54031C1021418DF40069F996 /* CompareAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54031C0F21418DF40069F996 /* CompareAnimation.swift */; };
+		541DEBE121527270009845A1 /* PickValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DEBE021527270009845A1 /* PickValueCell.swift */; };
+		541DEBE321527282009845A1 /* PickValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541DEBE221527282009845A1 /* PickValueCell.xib */; };
+		541DEBE52153C90C009845A1 /* Complexity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DEBE42153C90C009845A1 /* Complexity.swift */; };
+		541DEBE82153D1D4009845A1 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DEBE72153D1D4009845A1 /* Performance.swift */; };
 		54609C16213320B8002489C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54609C15213320B8002489C0 /* AppDelegate.swift */; };
 		54609C18213320B8002489C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54609C17213320B8002489C0 /* ViewController.swift */; };
 		54609C1B213320B8002489C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54609C19213320B8002489C0 /* Main.storyboard */; };
@@ -16,15 +24,38 @@
 		548FFC0D213333BD00669920 /* SortingTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC0C213333BD00669920 /* SortingTypeCell.swift */; };
 		548FFC0F21333C1200669920 /* SortingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548FFC0E21333C1200669920 /* SortingViewCell.xib */; };
 		548FFC1121333CC100669920 /* SortingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1021333CC100669920 /* SortingViewCell.swift */; };
-		548FFC1321333DCB00669920 /* SortingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1221333DCB00669920 /* SortingViewController.swift */; };
+		548FFC1321333DCB00669920 /* SortingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1221333DCB00669920 /* SortingTableViewController.swift */; };
 		548FFC1521347DA300669920 /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC1421347DA300669920 /* SortingView.swift */; };
 		548FFC172134A68900669920 /* SortingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC162134A68900669920 /* SortingItem.swift */; };
 		548FFC192134A7D100669920 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FFC182134A7D100669920 /* Extensions.swift */; };
+		54C024C22149BDB900F60E37 /* SortingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C024C12149BDB900F60E37 /* SortingAlgorithm.swift */; };
+		54C024C4214C1EA500F60E37 /* ComplexityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C024C3214C1EA500F60E37 /* ComplexityDetailCell.swift */; };
+		54C024C6214C1EB900F60E37 /* ComplexityDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C024C5214C1EB900F60E37 /* ComplexityDetailCell.xib */; };
+		54C024C8214C4E4F00F60E37 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C024C7214C4E4F00F60E37 /* ButtonCell.xib */; };
+		54C024CA214C4F2100F60E37 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C024C9214C4F2100F60E37 /* ButtonCell.swift */; };
+		54C024CC214C54FA00F60E37 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C024CB214C54FA00F60E37 /* DescriptionCell.swift */; };
+		54C024CE214C550900F60E37 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C024CD214C550900F60E37 /* DescriptionCell.xib */; };
+		54C024D0214C57D700F60E37 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C024CF214C57D700F60E37 /* SettingsTableViewController.swift */; };
 		54D0959B213329A400E02478 /* SortingTilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0959A213329A400E02478 /* SortingTilesViewController.swift */; };
+		54D2AB85215AC61600CCD0F1 /* SortingViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB84215AC61600CCD0F1 /* SortingViewModelItem.swift */; };
+		54D2AB88215AC73300CCD0F1 /* SortingViewModelAnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB87215AC73300CCD0F1 /* SortingViewModelAnimationItem.swift */; };
+		54D2AB8A215AC7F800CCD0F1 /* SortingViewModelButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB89215AC7F800CCD0F1 /* SortingViewModelButtonItem.swift */; };
+		54D2AB8C215AC85B00CCD0F1 /* SortingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB8B215AC85B00CCD0F1 /* SortingViewModel.swift */; };
+		54D2AB8E215BB0C200CCD0F1 /* SortingViewModelPerformanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB8D215BB0C200CCD0F1 /* SortingViewModelPerformanceItem.swift */; };
+		54D2AB92215BD93100CCD0F1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB91215BD93100CCD0F1 /* Observable.swift */; };
+		54D2AB94215E206600CCD0F1 /* SortingViewModelSliderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2AB93215E206600CCD0F1 /* SortingViewModelSliderItem.swift */; };
 		54E0DC3D2135EF88003CA9DA /* SwapAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E0DC3C2135EF88003CA9DA /* SwapAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54031C08214175AA0069F996 /* SwapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapViewPresenter.swift; sourceTree = "<group>"; };
+		54031C0A214186660069F996 /* AnimationSpeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationSpeedCell.xib; sourceTree = "<group>"; };
+		54031C0D214187380069F996 /* AnimationSpeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSpeedCell.swift; sourceTree = "<group>"; };
+		54031C0F21418DF40069F996 /* CompareAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareAnimation.swift; sourceTree = "<group>"; };
+		541DEBE021527270009845A1 /* PickValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickValueCell.swift; sourceTree = "<group>"; };
+		541DEBE221527282009845A1 /* PickValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickValueCell.xib; sourceTree = "<group>"; };
+		541DEBE42153C90C009845A1 /* Complexity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complexity.swift; sourceTree = "<group>"; };
+		541DEBE72153D1D4009845A1 /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		54609C12213320B8002489C0 /* SortingAlgorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortingAlgorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54609C15213320B8002489C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54609C17213320B8002489C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,11 +67,26 @@
 		548FFC0C213333BD00669920 /* SortingTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTypeCell.swift; sourceTree = "<group>"; };
 		548FFC0E21333C1200669920 /* SortingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortingViewCell.xib; sourceTree = "<group>"; };
 		548FFC1021333CC100669920 /* SortingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewCell.swift; sourceTree = "<group>"; };
-		548FFC1221333DCB00669920 /* SortingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewController.swift; sourceTree = "<group>"; };
+		548FFC1221333DCB00669920 /* SortingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTableViewController.swift; sourceTree = "<group>"; };
 		548FFC1421347DA300669920 /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
 		548FFC162134A68900669920 /* SortingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingItem.swift; sourceTree = "<group>"; };
 		548FFC182134A7D100669920 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		54C024C12149BDB900F60E37 /* SortingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingAlgorithm.swift; sourceTree = "<group>"; };
+		54C024C3214C1EA500F60E37 /* ComplexityDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexityDetailCell.swift; sourceTree = "<group>"; };
+		54C024C5214C1EB900F60E37 /* ComplexityDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexityDetailCell.xib; sourceTree = "<group>"; };
+		54C024C7214C4E4F00F60E37 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		54C024C9214C4F2100F60E37 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		54C024CB214C54FA00F60E37 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		54C024CD214C550900F60E37 /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
+		54C024CF214C57D700F60E37 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		54D0959A213329A400E02478 /* SortingTilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTilesViewController.swift; sourceTree = "<group>"; };
+		54D2AB84215AC61600CCD0F1 /* SortingViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModelItem.swift; sourceTree = "<group>"; };
+		54D2AB87215AC73300CCD0F1 /* SortingViewModelAnimationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModelAnimationItem.swift; sourceTree = "<group>"; };
+		54D2AB89215AC7F800CCD0F1 /* SortingViewModelButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModelButtonItem.swift; sourceTree = "<group>"; };
+		54D2AB8B215AC85B00CCD0F1 /* SortingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModel.swift; sourceTree = "<group>"; };
+		54D2AB8D215BB0C200CCD0F1 /* SortingViewModelPerformanceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModelPerformanceItem.swift; sourceTree = "<group>"; };
+		54D2AB91215BD93100CCD0F1 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		54D2AB93215E206600CCD0F1 /* SortingViewModelSliderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingViewModelSliderItem.swift; sourceTree = "<group>"; };
 		54E0DC3C2135EF88003CA9DA /* SwapAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +101,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54031C0C214186CB0069F996 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				541DEBE221527282009845A1 /* PickValueCell.xib */,
+				541DEBE021527270009845A1 /* PickValueCell.swift */,
+				54C024CD214C550900F60E37 /* DescriptionCell.xib */,
+				54C024CB214C54FA00F60E37 /* DescriptionCell.swift */,
+				54C024C7214C4E4F00F60E37 /* ButtonCell.xib */,
+				54C024C9214C4F2100F60E37 /* ButtonCell.swift */,
+				54C024C5214C1EB900F60E37 /* ComplexityDetailCell.xib */,
+				54C024C3214C1EA500F60E37 /* ComplexityDetailCell.swift */,
+				548FFC0E21333C1200669920 /* SortingViewCell.xib */,
+				548FFC1021333CC100669920 /* SortingViewCell.swift */,
+				54031C0A214186660069F996 /* AnimationSpeedCell.xib */,
+				54031C0D214187380069F996 /* AnimationSpeedCell.swift */,
+				548FFC0A2133330C00669920 /* SortingTypeCell.xib */,
+				548FFC0C213333BD00669920 /* SortingTypeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		541DEBE62153C910009845A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				541DEBE42153C90C009845A1 /* Complexity.swift */,
+				541DEBE72153D1D4009845A1 /* Performance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		54609C09213320B8002489C0 = {
 			isa = PBXGroup;
 			children = (
@@ -75,23 +151,40 @@
 			isa = PBXGroup;
 			children = (
 				548FFC182134A7D100669920 /* Extensions.swift */,
+				54D2AB91215BD93100CCD0F1 /* Observable.swift */,
 				54609C15213320B8002489C0 /* AppDelegate.swift */,
 				54609C17213320B8002489C0 /* ViewController.swift */,
-				548FFC1221333DCB00669920 /* SortingViewController.swift */,
+				548FFC1221333DCB00669920 /* SortingTableViewController.swift */,
 				54D0959A213329A400E02478 /* SortingTilesViewController.swift */,
+				54C024CF214C57D700F60E37 /* SettingsTableViewController.swift */,
+				54031C08214175AA0069F996 /* SwapViewPresenter.swift */,
 				54609C19213320B8002489C0 /* Main.storyboard */,
-				548FFC0E21333C1200669920 /* SortingViewCell.xib */,
+				54D2AB86215AC70800CCD0F1 /* ViewModel */,
+				54031C0C214186CB0069F996 /* Cells */,
 				548FFC1421347DA300669920 /* SortingView.swift */,
+				541DEBE62153C910009845A1 /* Model */,
+				54C024C12149BDB900F60E37 /* SortingAlgorithm.swift */,
 				54E0DC3C2135EF88003CA9DA /* SwapAnimation.swift */,
+				54031C0F21418DF40069F996 /* CompareAnimation.swift */,
 				548FFC162134A68900669920 /* SortingItem.swift */,
-				548FFC1021333CC100669920 /* SortingViewCell.swift */,
-				548FFC0A2133330C00669920 /* SortingTypeCell.xib */,
-				548FFC0C213333BD00669920 /* SortingTypeCell.swift */,
 				54609C1C213320C1002489C0 /* Assets.xcassets */,
 				54609C1E213320C1002489C0 /* LaunchScreen.storyboard */,
 				54609C21213320C1002489C0 /* Info.plist */,
 			);
 			path = SortingAlgorithms;
+			sourceTree = "<group>";
+		};
+		54D2AB86215AC70800CCD0F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54D2AB84215AC61600CCD0F1 /* SortingViewModelItem.swift */,
+				54D2AB87215AC73300CCD0F1 /* SortingViewModelAnimationItem.swift */,
+				54D2AB89215AC7F800CCD0F1 /* SortingViewModelButtonItem.swift */,
+				54D2AB8D215BB0C200CCD0F1 /* SortingViewModelPerformanceItem.swift */,
+				54D2AB93215E206600CCD0F1 /* SortingViewModelSliderItem.swift */,
+				54D2AB8B215AC85B00CCD0F1 /* SortingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +245,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C024C6214C1EB900F60E37 /* ComplexityDetailCell.xib in Resources */,
 				548FFC0B2133330C00669920 /* SortingTypeCell.xib in Resources */,
+				541DEBE321527282009845A1 /* PickValueCell.xib in Resources */,
 				548FFC0F21333C1200669920 /* SortingViewCell.xib in Resources */,
+				54C024C8214C4E4F00F60E37 /* ButtonCell.xib in Resources */,
+				54C024CE214C550900F60E37 /* DescriptionCell.xib in Resources */,
+				54031C0B214186660069F996 /* AnimationSpeedCell.xib in Resources */,
 				54609C20213320C1002489C0 /* LaunchScreen.storyboard in Resources */,
 				54609C1D213320C1002489C0 /* Assets.xcassets in Resources */,
 				54609C1B213320B8002489C0 /* Main.storyboard in Resources */,
@@ -167,16 +265,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D2AB8A215AC7F800CCD0F1 /* SortingViewModelButtonItem.swift in Sources */,
+				54031C1021418DF40069F996 /* CompareAnimation.swift in Sources */,
+				541DEBE121527270009845A1 /* PickValueCell.swift in Sources */,
+				54D2AB85215AC61600CCD0F1 /* SortingViewModelItem.swift in Sources */,
+				54031C09214175AA0069F996 /* SwapViewPresenter.swift in Sources */,
+				54C024CC214C54FA00F60E37 /* DescriptionCell.swift in Sources */,
+				54D2AB94215E206600CCD0F1 /* SortingViewModelSliderItem.swift in Sources */,
+				54D2AB88215AC73300CCD0F1 /* SortingViewModelAnimationItem.swift in Sources */,
 				548FFC0D213333BD00669920 /* SortingTypeCell.swift in Sources */,
 				548FFC192134A7D100669920 /* Extensions.swift in Sources */,
 				548FFC172134A68900669920 /* SortingItem.swift in Sources */,
+				54031C0E214187380069F996 /* AnimationSpeedCell.swift in Sources */,
+				54C024C4214C1EA500F60E37 /* ComplexityDetailCell.swift in Sources */,
+				541DEBE82153D1D4009845A1 /* Performance.swift in Sources */,
+				54D2AB92215BD93100CCD0F1 /* Observable.swift in Sources */,
+				54D2AB8C215AC85B00CCD0F1 /* SortingViewModel.swift in Sources */,
+				54C024D0214C57D700F60E37 /* SettingsTableViewController.swift in Sources */,
+				54C024CA214C4F2100F60E37 /* ButtonCell.swift in Sources */,
+				54C024C22149BDB900F60E37 /* SortingAlgorithm.swift in Sources */,
+				54D2AB8E215BB0C200CCD0F1 /* SortingViewModelPerformanceItem.swift in Sources */,
 				548FFC1521347DA300669920 /* SortingView.swift in Sources */,
 				54D0959B213329A400E02478 /* SortingTilesViewController.swift in Sources */,
 				54E0DC3D2135EF88003CA9DA /* SwapAnimation.swift in Sources */,
 				548FFC1121333CC100669920 /* SortingViewCell.swift in Sources */,
 				54609C18213320B8002489C0 /* ViewController.swift in Sources */,
+				541DEBE52153C90C009845A1 /* Complexity.swift in Sources */,
 				54609C16213320B8002489C0 /* AppDelegate.swift in Sources */,
-				548FFC1321333DCB00669920 /* SortingViewController.swift in Sources */,
+				548FFC1321333DCB00669920 /* SortingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

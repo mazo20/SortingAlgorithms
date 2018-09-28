@@ -19,29 +19,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="153" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cah-Hm-FR7">
-                        <rect key="frame" x="0.0" y="0.0" width="153" height="143"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-tc-BvV">
-                                <rect key="frame" x="12" y="12" width="49" height="22.5"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="4gu-tc-BvV" firstAttribute="top" secondItem="cah-Hm-FR7" secondAttribute="top" constant="12" id="T3d-Ou-xbx"/>
-                            <constraint firstItem="4gu-tc-BvV" firstAttribute="leading" secondItem="cah-Hm-FR7" secondAttribute="leading" constant="12" id="Zom-pX-I9J"/>
-                        </constraints>
-                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-tc-BvV">
+                        <rect key="frame" x="16" y="16" width="49" height="22.5"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="cah-Hm-FR7" firstAttribute="leading" secondItem="oDZ-4D-TFD" secondAttribute="leading" id="6Zk-1q-lDj"/>
-                <constraint firstAttribute="trailing" secondItem="cah-Hm-FR7" secondAttribute="trailing" id="Ee2-eZ-ywC"/>
-                <constraint firstAttribute="bottom" secondItem="cah-Hm-FR7" secondAttribute="bottom" id="JHN-ff-fiO"/>
-                <constraint firstItem="cah-Hm-FR7" firstAttribute="top" secondItem="oDZ-4D-TFD" secondAttribute="top" id="aOm-oa-aQM"/>
+                <constraint firstItem="dIZ-5W-KPf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4gu-tc-BvV" secondAttribute="trailing" constant="30" id="8VD-eQ-Lq5"/>
+                <constraint firstItem="4gu-tc-BvV" firstAttribute="leading" secondItem="dIZ-5W-KPf" secondAttribute="leading" constant="16" id="EUF-GV-J1h"/>
+                <constraint firstItem="4gu-tc-BvV" firstAttribute="top" secondItem="dIZ-5W-KPf" secondAttribute="top" constant="16" id="Kl5-kN-Oe0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="dIZ-5W-KPf"/>
             <size key="customSize" width="153" height="143"/>

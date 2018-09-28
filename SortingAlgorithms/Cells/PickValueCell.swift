@@ -1,16 +1,16 @@
 //
-//  SortedView.swift
+//  PickValueCell.swift
 //  SortingAlgorithms
 //
-//  Created by Maciej Kowalski on 26.08.2018.
+//  Created by Maciej Kowalski on 19.09.2018.
 //  Copyright © 2018 Maciej Kowalski. All rights reserved.
 //
 
 import UIKit
 
-class SortingViewCell: UITableViewCell {
+class PickValueCell: UITableViewCell {
     
-    @IBOutlet var sortingView: SortingView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

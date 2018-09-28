@@ -8,10 +8,24 @@
 
 import UIKit
 
+enum SortingType: Int {
+    case bubble, insertion, quicksort, heapsort, merge
+}
+
 class SortingView: UIView {
     
     var items: [SortingItem]?
     var itemLayers: [CAShapeLayer]?
+    var itemLayerPositions: [CGPoint]?
+    var animations = [Animatable]()
+    var animationSpeed: Double = 50
+    
+    var animationDuration: Double {
+        return 1.01 - animationSpeed
+    }
+    
+    fileprivate var finishedAnimations: Int = 0
+    fileprivate var currentAnimation: Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,6 +42,8 @@ class SortingView: UIView {
     }
     
     func draw(array: [Int]) {
+        guard !array.isEmpty else { return }
+        guard itemLayers == nil else { return }
         let count = array.count
         let width = frame.width / CGFloat(count)
         let max = array.max()!
@@ -35,6 +51,7 @@ class SortingView: UIView {
         let colors = colorsForValues(array: array)
         
         var items = [SortingItem]()
+        var positions = [CGPoint]()
         
         for i in 0..<count {
             let item = SortingItem(value: array[i], color: colors[i])
@@ -51,87 +68,77 @@ class SortingView: UIView {
             let path = UIBezierPath(rect: rect)
             
             let layer = CAShapeLayer()
+            //layer.frame = rect
             layer.fillColor = item.color.cgColor
+            layer.backgroundColor = item.color.cgColor
             layer.strokeColor = item.color.cgColor
             layer.path = path.cgPath
             layer.position = CGPoint(x: CGFloat(i) * width, y: frame.maxY)
+            positions.append(layer.position)
             layers.append(layer)
             self.layer.addSublayer(layer)
         }
         itemLayers = layers
+        itemLayerPositions = positions
     }
     
-    func sort() {
-        var animations = [SwapAnimation]()
-        var totalDuration: Double = 0
-        guard var items = items else { return }
-        for i in 0..<items.count-1 {
-            for j in 0..<items.count-1-i {
-                if items[j].value > items[j+1].value {
-                    items.swapAt(j, j+1)
-                    animations.append(animateSwap(layer1: itemLayers![j], layer2: itemLayers![j+1], withDuration: 3.0, beginTime: totalDuration))
-                    itemLayers?.swapAt(j, j+1)
-                    totalDuration += 1
-                }
-            }
-        }
-        self.items = items
-        
-        //var totalDuration: Double = 0
-        for swap in animations {
-            print(totalDuration)
-            swap.animation1.beginTime = totalDuration
-            swap.animation2.beginTime = totalDuration
-            swap.layer1.position = swap.position2
-            print(swap.position2)
-            print(swap.position1)
-            swap.layer2.position = swap.position1
-            //swap.layer1.add(swap.animation1, forKey: #keyPath(CALayer.position))
-            //swap.layer2.add(swap.animation2, forKey: #keyPath(CALayer.position))
-            
-            //totalDuration += 2
+    func sort(with sorting: SortingType) {
+        animations.removeAll()
+        guard let items = items else { return }
+        switch sorting {
+        case .bubble:
+            self.items = SortingAlgorithm.bubbleSort(items: items, swapAnimation: swapAnimationForIndex(i:j:), compareAnimation: compareAnimationFor(i:j:))
+        case .insertion:
+            self.items = SortingAlgorithm.insertionSort(items: items, swapAnimation: swapAnimationForIndex(i:j:), compareAnimation: compareAnimationFor(i:j:))
+        case .quicksort:
+            self.items = SortingAlgorithm.quicksort(items: items, swapAnimation: swapAnimationForIndex(i:j:), compareAnimation: compareAnimationFor(i:j:))
+        case .heapsort:
+            self.items = SortingAlgorithm.heapsort(items: items, swapAnimation: swapAnimationForIndex(i:j:), compareAnimation: compareAnimationFor(i:j:))
+        case .merge:
+            self.items = SortingAlgorithm.mergesort(items: items, swapAnimation: swapAnimationForIndex(i:j:), compareAnimation: compareAnimationFor(i:j:))
         }
         
+        guard let animation = animations.first else { return }
+        fire(animation: animation, withDuration: animationDuration)
         
     }
     
-    func animateSwap(layer1: CAShapeLayer, layer2: CAShapeLayer, withDuration duration: Double, beginTime: Double) -> SwapAnimation {
-        let position1 = layer1.position
-        let position2 = layer2.position
+    private func swapAnimationForIndex(i: Int, j: Int) {
+        guard i != j else { return }
+        let layer1 = itemLayers![i]
+        let layer2 = itemLayers![j]
+        let position1 = itemLayerPositions![i]
+        let position2 = itemLayerPositions![j]
         
-        let animation1 = CABasicAnimation(keyPath: #keyPath(CALayer.position))
-        animation1.beginTime = beginTime + CACurrentMediaTime()
-        animation1.fromValue = position1
-        animation1.toValue = position2
-        animation1.duration = duration
-        animation1.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        
-        layer1.position = position2
-        layer1.add(animation1, forKey: #keyPath(CALayer.position))
-        
-        let animation2 = CABasicAnimation(keyPath: #keyPath(CALayer.position))
-        animation2.beginTime = beginTime + CACurrentMediaTime()
-        animation2.fromValue = position2
-        animation2.toValue = position1
-        animation2.duration = duration
-        animation2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        print(animation2.duration)
-        
-        layer2.position = position1
-        layer2.add(animation2, forKey: #keyPath(CALayer.position))
-        
-        return SwapAnimation(layer1: layer1, layer2: layer2, position1: position1, position2: position2, animation1: animation1, animation2: animation2)
+        let swapAnimation = SwapAnimation(layer1: layer1, layer2: layer2, position1: position1, position2: position2)
+        animations.append(swapAnimation)
+        itemLayers?.swapAt(i, j)
+    }
+    
+    private func compareAnimationFor(i: Int, j: Int) {
+        guard i != j else { return }
+        let layer1 = itemLayers![i]
+        let layer2 = itemLayers![j]
+        let compareAnimation = CompareAnimation(layer1: layer1, layer2: layer2)
+        animations.append(compareAnimation)
+    }
+    
+    func fire(animation: Animatable, withDuration duration: CFTimeInterval) {
+        animation.run(withDuration: duration, completion: { [weak self] finished in
+            if self == nil { return }
+            self!.currentAnimation += 1
+            guard self!.currentAnimation < self!.animations.count else { return }
+            self!.fire(animation: self!.animations[self!.currentAnimation], withDuration: self!.animationDuration)
+        })
     }
     
     private func colorsForValues(array: [Int]) -> [UIColor] {
         let count = array.count
         var colors = [UIColor]()
-        let colorLength = 1530 / (count - 1)
-        print(colorLength)
+        let colorLength = 1530 / count
         
         for i in 0..<count {
             colors.append(colorFor(length: colorLength*i))
-            print(colorLength*i)
         }
         return colors
     }
@@ -143,30 +150,26 @@ class SortingView: UIView {
         switch length {
         case 0...255:
             green = length
-        case 256...510:
+        case 256...511:
             green = 255
-            red = 255 - length%256
-        case 511...765:
+            red = 255 - length % 256
+        case 512...767:
             red = 0
             green = 255
-            blue = length%256
-        case 766...1020:
+            blue = length % 256
+        case 768...1023:
             red = 0
-            green = 255-length%256
+            green = 255 - length % 256
             blue = 255
-        case 1021...1275:
-            red = length%256
+        case 1024...1279:
+            red = length % 256
             green = 0
             blue = 255
         default:
             red = 255
             green = 0
-            blue = 255-length%256
+            blue = 255 - length % 256
         }
         return UIColor(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: 1)
     }
-    
-    
 }
-
-

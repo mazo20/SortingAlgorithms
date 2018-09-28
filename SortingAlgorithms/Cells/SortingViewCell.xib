@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,24 +17,9 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BaG-5m-Qev" id="IiN-4T-LB2">
                 <rect key="frame" x="0.0" y="0.0" width="444" height="284.5"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT0-UF-JlV" customClass="SortingView" customModule="SortingAlgorithms" customModuleProvider="target">
-                        <rect key="frame" x="20" y="0.0" width="404" height="285"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="vT0-UF-JlV" secondAttribute="bottom" id="9T4-f3-5NO"/>
-                    <constraint firstAttribute="trailing" secondItem="vT0-UF-JlV" secondAttribute="trailing" constant="20" id="ZsN-bx-A0w"/>
-                    <constraint firstItem="vT0-UF-JlV" firstAttribute="top" secondItem="IiN-4T-LB2" secondAttribute="top" id="pVT-0u-QFH"/>
-                    <constraint firstItem="vT0-UF-JlV" firstAttribute="leading" secondItem="IiN-4T-LB2" secondAttribute="leading" constant="20" id="wnq-bd-XXh"/>
-                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <connections>
-                <outlet property="sortingView" destination="vT0-UF-JlV" id="arD-Sx-Urk"/>
-            </connections>
             <point key="canvasLocation" x="-209" y="-102.5"/>
         </tableViewCell>
     </objects>
